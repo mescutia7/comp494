@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="font-family:'Verdana'"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!--style the <a> elements inside the list with li a-->
+<!--overflow:hidden is added to the ul elmnt. to prevent li elments from going outside of the list-->
+<style>
+body{
+    font-family:'Verdana';
+    color: white;
+    background-color: dimgray;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+li {
+  float: left;
+  border-right:1px solid #bbb;
+
+}
+li a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+li a:hover {
+    background-color: rgb(180, 179, 179);
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+th, td {
+  padding: 7px;
+}
+div{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+#info{
+    color: darkgrey;
+}
+#cap{
+    color: white;
+    text-align: center;
+}
+.responsive {
+  width: 55%;
+  height: auto;
+}
+</style>
+
+<!-- A navigation bar is basically a list of link. We can remove bullets & margins by using CSS -->
+<ul>
+    <li><a href = "./MyWebsite.html">Home</a></li>
+    <li><a href= "./AboutMe.html">About me</a></li>
+    <li><a href= "./ContactUs.html">Contact us</a></li>
+    <li><a href= "./Mystery.html">Mystery!</a></li>      
+</ul>
+
+<div style="padding:20px; margin-top:30px; height:1500px;">
+    <h1>Welcome to my website!</h1> 
+    <br>
+
+    <p>Some pics from my trip to Boston last summer. Click on the image to see more!</p>
+   <!-- <img src="http://i66.tinypic.com/24l80eu.jpg" alt="Boston Train" style="width:400px;height:300px;"> -->
+    <img src="http://i67.tinypic.com/qyv4a9.jpg" id = "mainImage" onclick = "changeImage()" alt="Boston Boats" style="width:400px;height:300px;" class="responsive">
+   <!-- <img src="http://i68.tinypic.com/302wfpe.jpg" alt="Boston Buildings" style="width:400px;height:300px;"> -->
+   <!-- <img src="https://i.ibb.co/DDtJ9gT/Boston4.jpg" alt="Boston Museum" style="width:400px;height:300px;"> -->
+
+
+   <script>
+       var myImage = document.getElementById('mainImage');
+       var pictureArray = ["http://i67.tinypic.com/qyv4a9.jpg", "http://i66.tinypic.com/24l80eu.jpg", "http://i68.tinypic.com/302wfpe.jpg", "https://i.ibb.co/DDtJ9gT/Boston4.jpg"]; 
+       var pictureIndex = 1;
+
+       function changeImage(){
+           myImage.setAttribute("src", pictureArray[pictureIndex]);
+           pictureIndex = pictureIndex + 1;
+
+           if(pictureIndex > 3) {
+               pictureIndex = 0;
+           }
+        }
+
+   </script>
+
+
+
+    <br><br><br>
+
+
+
+
+
+    <table align = "center">
+        <caption id="cap">Schools I have studied in</caption>
+        <tr>
+            <th></th>
+            <th>Freshman</th>
+            <th>Sophmore</th>
+            <th>Junior</th>
+            <th>Senior</th>
+        </tr>
+        <tr>
+            <th>School</th>
+            <td>USD</td>
+            <td>USD/SAS</td>
+            <td>USD</td>
+            <td>TBD</td>
+        </tr>
+    </table>
+
+    <br><br><br>
+    <h4>Responsive Image!</h4>
+    <img src="http://i67.tinypic.com/qyv4a9.jpg" alt="Boston Boats" class="responsive">
+    
+    <br><br><br><br><br><br>
+    <p id = "info"><i>Scroll down for footer</i></p>
+  </div>
+
+  <footer>
+        <p>Created by: Max Escutia &copy; 2019</p>
+        <p>Contact information: <a href="mailto:mescutia@sandiego.edu">mescutia@sandiego.edu</a>.</p>
+</footer>
+
+
+</body>
+</html>

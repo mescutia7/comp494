@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Contact Us</title>
+</head>
+<body  style="font-family:'Verdana'" onload="timeout_init();"> 
+
+<!--This is in case the browser does not support the modern html5 widgets. (CH3.4 from book)--> 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<script>
+$(function() {
+    if (!Modernizr.inputtypes['date']) {
+        $('input[type=date]').datepicker({ 
+            dateFormat: 'mm-dd-yy'
+        });
+    }
+});
+</script>
+
+<!--style the <a> elements inside the list with li a-->
+<!--overflow:hidden is added to the ul elmnt. to prevent li elments from going outside of the list-->
+<style>
+body{
+    font-family:'Verdana';
+    color: white;
+    background-color: dimgray;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+li {
+  float: left;
+  border-right:1px solid #bbb;
+
+}
+li a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+li a:hover {
+    background-color: rgb(180, 179, 179);
+}
+div{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+#info{
+    color: darkgrey;
+}
+</style>
+
+<!-- A navigation bar is basically a list of link. We can remove bullets & margins by using CSS -->
+<ul>
+    <li><a href = "./MyWebsite.html">Home</a></li>
+    <li><a href= "./AboutMe.html">About me</a></li>
+    <li><a href= "./ContactUs.html">Contact us</a></li>
+    <li><a href= "./Mystery.html">Mystery!</a></li>
+    <a href= "./json.html"></a>
+
+</ul>
+
+<div style="padding:20px; margin-top:30px; height:1500px;">
+    <h1>Contact Us</h1>
+    
+    <script src="validate.js" defer></script>
+    <form id="myForm" method="post" action="mailto:mescutia@sandiego.edu">
+        <label for="name">Name: </label>
+        <input type = "text" id="name" name = "name" placeholder="Your name..."/><br>
+        <label for="email">Email: </label>
+        <input type = "text" id="email"  name = "email" placeholder="Your email..."/>
+        <br><br>
+        <label for="comments">Comments: </label><br>
+        <textarea rows = "5" cols = "50" id="comments" name = "description" placeholder="Enter text..."></textarea>
+        <br><br>
+        <label for="date">Date: </label><br>
+        <input type= "date" id="date" name="date" placeholder="Click to choose date!"><br><br>
+        <input type="submit" id = "validate" value="submit" onclick="stopCounter()" > 
+        <!--<input type="submit" id = "validate" value="submit" onclick="stopCounter(); window.open('./json.html','_blank')" > -->
+     </form>
+
+     <br><br><br>
+     <pre id='output'></pre>
+     
+
+
+
+
+     <br><br><br><br><br><br>
+    <p id = "info"><i>Scroll down for footer</i></p>
+</div>
+
+
+
+<footer>
+        <p>Created by: Max Escutia &copy; 2019</p>
+        <p>Contact information: <a href="mailto:mescutia@sandiego.edu">mescutia@sandiego.edu</a>.</p>
+</footer>
+
+</body>
+</html>

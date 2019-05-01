@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<body> 
+
+<!--style the <a> elements inside the list with li a-->
+<!--overflow:hidden is added to the ul elmnt. to prevent li elments from going outside of the list-->
+<style>
+body{
+    font-family:'Verdana';
+    color: white;
+    background-color: rgb(139, 137, 137);
+}
+
+#NavBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#info{
+    color: darkgrey;
+    text-align: center;
+}
+li a#navBar{
+    display: block;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    border-right:1px solid #bbb;
+}
+li a:hover {
+    background-color: rgb(180, 179, 179);
+}
+h1, h3 {
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+.responsive {
+  width: auto;
+  height: 250;
+}
+</style>
+
+<!-- A navigation bar is basically a list of link. We can remove bullets & margins by using CSS -->
+<ul id="NavBar">
+    <li><a href = "./MyWebsite.html" id= "navBar">Home</a></li>
+    <li><a href= "./AboutMe" id= "navBar">About me</a></li>
+    <li><a href= "./ContactUs.html" id= "navBar">Contact us</a></li>
+    <li><a href= "./Mystery.html" id= "navBar">Mystery!</a></li>      
+</ul>
+
+<div style="padding:20px; margin-top:30px; height:1500px;">
+    <h1 >About Me</h1>
+    <h3>Here is some cool information about myslef!</h3>
+
+    <p>My name is Max.</p>
+    <p>I am 20 yrs old & i am from Mexico.</p>
+
+    <p>Some of my favorite things include:</p>
+    <ul>
+        <li>Design</li>
+        <li>Technology</li>
+        <li>Fashion</li>
+        <li>YouTube</li>
+        <li>Soccer</li>
+        <li>Matcha! (Green Tea anything)</li>
+    </ul>
+
+    <br>
+    <p>Check out these 2 links to learn more about me! </p>
+    <ol>
+        <li><a href="https://www.linkedin.com/in/maximilian-escutia-982a23ab/" target="_blank">My LinkedIn</a></li><br>
+        <li><a href="https://maxescutia.wixsite.com/maximilianportfolio" target="_blank">My Design Portfolio</a></li>
+    </ol>
+    
+    <br>
+    <p>A video of my <strong>favorite</strong> semester abroad: </p>
+    <!--<iframe width="460" height="250" src="https://www.youtube.com/embed/YqFDVpT5MVU?rel=0"></iframe>-->
+    <iframe class="responsive" src="https://www.youtube.com/embed/YqFDVpT5MVU?rel=0"></iframe>
+    <br><br><br><br><br><br>
+    <p id = "info"><i>Scroll down for footer</i></p>
+  </div>
+
+  <footer>
+        <p>Created by: Max Escutia &copy; 2019</p>
+        <p>Contact information: <a href="mailto:mescutia@sandiego.edu">mescutia@sandiego.edu</a>.</p>
+    </footer>
+</body>
+</html>
